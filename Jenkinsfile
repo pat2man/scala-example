@@ -21,7 +21,7 @@ node ('scala') {
     }
 
     stage('Trigger Build') {            
-        echo 'Triggering build of ${scala-example-app} in ${project}'
-        sh "oc start-build ${scala-example-app} --from-dir=target/universal/stage --follow -n ${project}"
+        echo 'Triggering build of ${appName} in ${project}'
+        sh "oc start-build ${appName} --from-dir=target/universal/stage --follow -n ${project}"
     }
 }
